@@ -5,5 +5,5 @@ export default mongoose.model('appliance', {
   room: { type: String, required: true },
   model: { type: String, required: true },
   connection: Boolean,
-  busy: Boolean,
+  task: Boolean,
 })
