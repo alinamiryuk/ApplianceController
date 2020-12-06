@@ -12,3 +12,4 @@ export const createAppliance = (data) => {
     payload: data
   }
 }
+

@@ -1,13 +1,20 @@
-import { GET_ALL_APPLIANCES } from "./actionTypes";
+import {
+  CREATE_APPLIANCE,
+  DELETE_APPLIANCE,
+  GET_ALL_APPLIANCES,
+} from './actionTypes'
 
 const initialState = []
 
 export const reducer = (state = initialState, action) => {
-switch (action.type) {
-  case GET_ALL_APPLIANCES:
-    return action.payload
+  switch (action.type) {
+    case GET_ALL_APPLIANCES:
+      return action.payload
 
-  default:
-    return state
-}
+    case CREATE_APPLIANCE:
+      return [...state, action.payload]
+
+    default:
+      return state
+  }
 }
