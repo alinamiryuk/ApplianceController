@@ -17,33 +17,9 @@ export const Appliance = ({ appliance }) => {
   })
 
   return (
-    <>
-      <div className="appliance">
-        <h2>{appliance.model}</h2>
-        {appliance.connection ? (
-          <div className="appliance__online">on</div>
-        ) : (
-          <div className="appliance__offline">off</div>
-        )}
-        {appliance.task ? (
-          <div className="appliance__online">busy</div>
-        ) : (
-          <div className="appliance__offline">free</div>
-        )}
-        <p>{appliance.room}</p>
-        <p>{appliance.applianceType}</p>
-        <button
-          onClick={(e) => {
-            e.preventDefault()
-            dispatch(fetchDeleteAppliance(appliance))
-          }}
-        >
-          DELETE
-        </button>
-        <button onClick={() => setEditArea((state) => !state)}>EDIT</button>
-      </div>
+    <div className="appliance">
       {editArea ? (
-        <div className="applianceCreator">
+        <div className="appliance__editArea">
           <input
             name="model"
             defaultValue={data.model}
@@ -75,7 +51,34 @@ export const Appliance = ({ appliance }) => {
             SAVE
           </button>
         </div>
-      ) : null}
-    </>
+      ) : (
+        <>
+          <div className="appliance__title">
+            <h2>{appliance.model}</h2>
+            {appliance.connection ? (
+              <div className="appliance__connection appliance__online"><img src="/images/wf.png" /></div>
+            ) : null }
+          </div>
+
+          {appliance.applianceType === 'washingMachine' ? (
+            <img src="/images/w.png" />
+          ) : (
+            <img src="/images/ov.png" />
+          )}
+          <p>location: {appliance.room}</p>
+          <div className="appliance__buttons">
+            <button
+              onClick={(e) => {
+                e.preventDefault()
+                dispatch(fetchDeleteAppliance(appliance))
+              }}
+            >
+              DELETE
+            </button>
+            <button onClick={() => setEditArea((state) => !state)}>EDIT</button>
+          </div>
+        </>
+      )}
+    </div>
   )
 }

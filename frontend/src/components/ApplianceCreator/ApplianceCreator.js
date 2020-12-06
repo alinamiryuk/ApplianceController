@@ -16,28 +16,30 @@ export const ApplianceCreator = () => {
 
   return (
     <div className="applianceCreator">
-      <input
-        name="model"
-        defaultValue={data.model}
-        onChange={setData}
-        placeholder="example: EFLS527UIW"
-      />
-      <select name="room" defaultValue={data.room} onChange={setData}>
-        <option selected value="bathroom">
-          bathroom
-        </option>
-        <option value="kitchen">kitchen</option>
-      </select>
-      <select
-        name="applianceType"
-        defaultValue={data.applianceType}
-        onChange={setData}
-      >
-        <option selected value="washingMachine">
-          washing machine
-        </option>
-        <option value="oven">oven</option>
-      </select>
+      <div className="applianceCreator__data">
+        <input
+          name="model"
+          defaultValue={data.model}
+          onChange={setData}
+          placeholder="example: EFLS527UIW"
+        />
+        <select name="room" defaultValue={data.room} onChange={setData}>
+          <option selected value="bathroom">
+            bathroom
+          </option>
+          <option value="kitchen">kitchen</option>
+        </select>
+        <select
+          name="applianceType"
+          defaultValue={data.applianceType}
+          onChange={setData}
+        >
+          <option selected value="washingMachine">
+            washing machine
+          </option>
+          <option value="oven">oven</option>
+        </select>
+      </div>
       <button onClick={() => dispatch(fetchCreateAppliance(data))}>ADD</button>
     </div>
   )

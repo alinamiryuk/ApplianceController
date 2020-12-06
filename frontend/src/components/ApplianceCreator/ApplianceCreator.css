@@ -1,0 +1,10 @@
+.applianceCreator {
+  margin: 1vh 0 1vh 0;
+  display: grid;
+}
+
+.applianceCreator__data {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+height: 6vh;
+}
