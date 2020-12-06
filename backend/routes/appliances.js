@@ -3,10 +3,13 @@ import Appliance from '../models/Appliance.js'
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
-  Appliance.find((err, data) =>
-    err ? res.status(500).send(err) : res.status(200).send(data)
-  )
+router.get('/', async (req, res) => {
+  try {
+    const appliances = await Appliance.find()
+    res.status(200).json(appliances)
+  } catch (err) {
+    res.status(500).json({ message: 'Something goes wrong' })
+  }
 })
 
 router.post('/create', (req, res) => {
