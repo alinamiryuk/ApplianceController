@@ -7,7 +7,7 @@ export const fetchGetAllAppliances = () => async (dispatch) => {
 }
 
 export const fetchCreateAppliance = (data) => async (dispatch) => {
-  const response = await fetch('/api/appliances/create', {
+  const response = await fetch('/api/appliances', {
     method: 'POST',
     headers: {
       'Content-Type': 'Application/json',
@@ -19,7 +19,7 @@ export const fetchCreateAppliance = (data) => async (dispatch) => {
 }
 
 export const fetchDeleteAppliance = (data) => async (dispatch) => {
-  const response = await fetch('/api/appliances/delete', {
+  const response = await fetch('/api/appliances', {
     method: 'DELETE',
     headers: {
       'Content-Type': 'Application/json',
@@ -29,3 +29,17 @@ export const fetchDeleteAppliance = (data) => async (dispatch) => {
   const result = await response.json()
   dispatch(getAllAppliances(result))
 }
+
+export const fetchEditAppliance = (data) => async (dispatch) => {
+  const response = await fetch('/api/appliances', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'Application/json',
+    },
+    body: JSON.stringify(data),
+  })
+  const result = await response.json()
+  dispatch(getAllAppliances(result))
+}
+
+

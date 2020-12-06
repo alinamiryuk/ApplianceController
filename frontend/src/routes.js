@@ -8,7 +8,6 @@ export const useRoutes = () => {
     <Switch>
       <Route path="/create" component={ApplianceCreator} />
       <Route path="/" component={AppliancesList} />
-      {/* <Route path="/edit" component={ApplianceEditor} /> */}
     </Switch>
   )
 }
