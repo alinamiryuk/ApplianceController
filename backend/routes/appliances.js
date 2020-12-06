@@ -12,11 +12,15 @@ router.get('/', async (req, res) => {
   }
 })
 
-router.post('/create', (req, res) => {
-  const message = req.body
-  Appliance.create(message, (err, data) =>
-    err ? res.status(500).send(err) : res.status(201).send(data)
-  )
+router.post('/create', async (req, res) => {
+  try {
+    const data = req.body
+    const appliance = new Appliance(data)
+    await appliance.save()
+    res.status(201).json({ appliance })
+  } catch (err) {
+    res.status(500).json({ message: 'Something goes wrong' })
+  }
 })
 
 export { router as appliancesRouter }
