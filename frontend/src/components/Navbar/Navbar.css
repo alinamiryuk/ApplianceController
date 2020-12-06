@@ -1,6 +1,6 @@
 .navbar {
   display: flex;
-  background-color: #272F59;
+  background-color: #272f59;
   min-height: 10vh;
   align-items: center;
   justify-content: space-around;
@@ -13,6 +13,4 @@
 .navbar > a {
   color: white;
   text-decoration: none;
-  
 }
-
