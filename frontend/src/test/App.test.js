@@ -1,17 +1,17 @@
-import App from '../App'
 import React from 'react'
 import { shallow } from 'enzyme'
 import { expect } from 'chai'
 import { NavLink } from 'react-router-dom'
 import { Navbar } from '../components/Navbar/Navbar'
+import App from '../App'
 
 describe('components rendering', () => {
 
-  it('renders App component without crashing', () => {
+  it('should render App component without crashing', () => {
     shallow(<App />)
   })
-  
-  it('renders Navbar component without crashing', () => {
+
+  it('should render Navbar component without crashing', () => {
     shallow(<Navbar />)
   })
 })
@@ -31,7 +31,7 @@ describe('Navbar component', () => {
     expect(firstNavLink.props()).to.have.all.keys('to', 'children')
   })
 
-  it('Navlink contains correct passed prop', () => {
+  it('Navlink contains correct text', () => {
     expect(lastNavLink.text()).to.equal('Add a new appliance')
     expect(firstNavLink.text()).to.equal('All appliances')
     expect(lastNavLink.text()).to.be.a('string', 'Add a new appliance')
