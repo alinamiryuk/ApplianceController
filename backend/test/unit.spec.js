@@ -1,8 +1,6 @@
 import chai from 'chai'
 import chaiHttp from 'chai-http'
 import server from '../server.js'
-import Appliance from '../models/Appliance.js'
-const should = chai.should()
 const expect = chai.expect
 
 chai.use(chaiHttp)

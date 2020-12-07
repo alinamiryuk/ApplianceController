@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { useForm } from '../../hooks/useForm'
 import { fetchCreateAppliance } from '../../redux/thunks'
@@ -40,7 +41,11 @@ export const ApplianceCreator = () => {
           <option value="oven">oven</option>
         </select>
       </div>
-      <button onClick={() => dispatch(fetchCreateAppliance(data))}>ADD</button>
+      <NavLink to="/">
+        <button onClick={() => dispatch(fetchCreateAppliance(data))}>
+          ADD
+        </button>
+      </NavLink>
     </div>
   )
 }

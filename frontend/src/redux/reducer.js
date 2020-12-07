@@ -10,7 +10,6 @@ export const reducer = (state = initialState, action) => {
     case GET_ALL_APPLIANCES:
       return action.payload
 
-
     case CREATE_APPLIANCE:
       return [...state, action.payload]
 

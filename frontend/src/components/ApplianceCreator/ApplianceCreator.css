@@ -4,7 +4,12 @@
 }
 
 .applianceCreator__data {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-height: 6vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 6vh;
+}
+
+.applianceCreator > a {
+  margin-top: 1vh;
+  justify-self: center;
 }
