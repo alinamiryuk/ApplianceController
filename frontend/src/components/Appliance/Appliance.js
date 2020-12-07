@@ -13,7 +13,7 @@ export const Appliance = ({ appliance }) => {
     room: appliance.room,
     applianceType: appliance.applianceType,
     connection: appliance.connection,
-    task: appliance.task,
+    task: appliance.task
   })
 
   return (
