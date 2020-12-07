@@ -6,10 +6,6 @@
   justify-content: space-around;
 }
 
-.navbar > a:active {
-  background-color: red;
-}
-
 .navbar > a {
   color: white;
   text-decoration: none;

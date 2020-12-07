@@ -1,0 +1,49 @@
+.appliance {
+  margin: 1vh 0 1vh 0;
+  display: grid;
+}
+
+.appliance__connection > img {
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+}
+
+.appliance__offline {
+  background-color: tomato;
+}
+
+.appliance__title {
+  display: flex;
+  justify-self: center;
+}
+
+.appliance__buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.appliance__buttons > button {
+  margin: 0 0.5vw 0 0.5vw;
+}
+
+
+.appliance__editArea {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: space-around;
+}
+
+img {
+  max-width: 15vw;
+}
+
+img,
+p,
+h2 {
+  justify-self: center;
+}
+
+p {
+  margin: 1vh 0 1vh 0;
+}

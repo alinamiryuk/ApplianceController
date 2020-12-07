@@ -12,7 +12,6 @@ export const AppliancesList = () => {
   }, [dispatch])
   return (
     <div className="appliancesList">
-      {console.log(appliances)}
       {appliances.map((appliance) => (
         <div>
           <Appliance appliance={appliance} key={appliance._id} />
