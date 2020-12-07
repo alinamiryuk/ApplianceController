@@ -1,4 +1,4 @@
-import { CREATE_APPLIANCE, GET_ALL_APPLIANCES, GET_APPLIANCE } from "./actionTypes"
+import { CREATE_APPLIANCE, GET_ALL_APPLIANCES } from "./actionTypes"
 
 export const getAllAppliances = (data) => {
   return {

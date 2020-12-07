@@ -19,5 +19,7 @@ server.listen(PORT, (err) => {
   })
 })
 
+export default server
+
 
 
