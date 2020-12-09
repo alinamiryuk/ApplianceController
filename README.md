@@ -10,7 +10,7 @@ MERN (MongoDB, Express, React, Node), Redux, Redux-Thunk, CSS, Chai, Mocha, Enzy
 cd backend/ 
 
 npm i
-server: nodemon server.js
+server: npm start
 test: npm test
 
 cd ..
